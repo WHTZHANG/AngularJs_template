@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <title>AngularJs2.0</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/navigation/custom.min.css">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--引入 es6-shim ，它会给全局对象 window 打上补丁，使其支持 ES2015(ES6) 的必备特性。 然后是 Angular 2 的 polyfills ，以及 zone.js 和 reflect-metadata 。 然后是用于模块加载的 SystemJS 库。-->
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!--    <script src="app/common/navigation/custom.js"></script>-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<!-- 3. Display the application -->
+<body class="nav-md">
+<my-app>Loading...</my-app>
+</body>
+</html>
